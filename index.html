@@ -72,14 +72,51 @@
     <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="section-content">
-            <h2>About Me</h2>
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Write your bio here. Who are you? What drives you?</p>
-                    <p>Add more paragraphs about your background, education, interests.</p>
+                    <div class="about-intro">
+                        <p>I'm a passionate <span class="highlight">Web Developer</span> based in Addis Ababa, Ethiopia. I love building things that live on the internet, from simple websites to complex web applications.</p>
+                        <p>My journey in tech started with curiosity and has evolved into a deep passion for creating user-friendly, visually appealing, and functional digital experiences.</p>
+                    </div>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>My Mission</h4>
+                                <p>To create impactful digital solutions that make a difference in people's lives.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>My Vision</h4>
+                                <p>To continuously learn and grow as a developer while contributing to meaningful projects.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>What I Love</h4>
+                                <p>Clean code, beautiful design, and solving complex problems with simple solutions.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-image">
-                    <!-- Add your photo: <img src="images/profile.jpg" alt="Yetemgeta Bekele"> -->
+                    <div class="image-placeholder">
+                        <i class="fas fa-user"></i>
+                        <p>Your Photo Here</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -88,34 +125,46 @@
     <!-- Skills Section -->
     <section id="skills" class="section skills-section">
         <div class="section-content">
-            <h2>Skills</h2>
+            <div class="section-header">
+                <h2>Skills & Technologies</h2>
+                <p class="section-subtitle">Tools and technologies I work with</p>
+            </div>
             <div class="skills-grid">
                 <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <h3>Frontend</h3>
-                    <ul>
-                        <li><i class="devicon-html5-plain colored"></i> HTML5</li>
-                        <li><i class="devicon-css3-plain colored"></i> CSS3</li>
-                        <li><i class="devicon-javascript-plain colored"></i> JavaScript</li>
-                        <li><i class="devicon-react-original colored"></i> React</li>
-                        <li><i class="devicon-typescript-plain colored"></i> TypeScript</li>
-                    </ul>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                        <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                        <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="devicon-react-original colored"></i> React</span>
+                        <span class="skill-tag"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                    </div>
                 </div>
                 <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
                     <h3>Backend</h3>
-                    <ul>
-                        <li><i class="devicon-nodejs-plain colored"></i> Node.js</li>
-                        <li><i class="devicon-python-plain colored"></i> Python</li>
-                        <li><i class="devicon-mongodb-plain colored"></i> MongoDB</li>
-                    </ul>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                        <span class="skill-tag"><i class="devicon-python-plain colored"></i> Python</span>
+                        <span class="skill-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+                    </div>
                 </div>
                 <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
                     <h3>Tools</h3>
-                    <ul>
-                        <li><i class="devicon-git-plain colored"></i> Git</li>
-                        <li><i class="devicon-github-original"></i> GitHub</li>
-                        <li><i class="devicon-figma-plain colored"></i> Figma</li>
-                        <li><i class="devicon-vscode-plain colored"></i> VS Code</li>
-                    </ul>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git</span>
+                        <span class="skill-tag"><i class="devicon-github-original"></i> GitHub</span>
+                        <span class="skill-tag"><i class="devicon-figma-plain colored"></i> Figma</span>
+                        <span class="skill-tag"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -171,47 +220,110 @@
     <!-- Resume Section -->
     <section id="resume" class="section resume-section">
         <div class="section-content">
-            <h2>Resume</h2>
-            <div class="resume-content">
-                <div class="experience">
-                    <h3>Experience</h3>
-                    <div class="resume-item">
-                        <h4>Job Title</h4>
-                        <p class="company">Company Name</p>
-                        <p class="date">2023 - Present</p>
-                        <p>Description of responsibilities and achievements.</p>
+            <div class="section-header">
+                <h2>Resume</h2>
+                <p class="section-subtitle">My professional journey</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - Present</span>
+                        <h3>Job Title</h3>
+                        <p class="timeline-company">Company Name</p>
+                        <p>Description of responsibilities and achievements. Built and maintained web applications, collaborated with cross-functional teams.</p>
                     </div>
                 </div>
-                <div class="education">
-                    <h3>Education</h3>
-                    <div class="resume-item">
-                        <h4>Degree Name</h4>
-                        <p class="institution">University Name</p>
-                        <p class="date">2020 - 2024</p>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020 - 2024</span>
+                        <h3>Degree Name</h3>
+                        <p class="timeline-company">University Name</p>
+                        <p>Bachelor's degree in Computer Science or related field. Relevant coursework and projects.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022</span>
+                        <h3>Freelance Developer</h3>
+                        <p class="timeline-company">Self-employed</p>
+                        <p>Worked on various web development projects for clients, building websites and web applications.</p>
                     </div>
                 </div>
             </div>
-            <a href="#" class="download-btn" download>Download CV</a>
+            <div class="resume-actions">
+                <a href="#" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="section-content">
-            <h2>Get In Touch</h2>
-            <p>Have a project in mind? Let's talk.</p>
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-            <div class="contact-info">
-                <p>Email: your.email@example.com</p>
-                <p>Location: Addis Ababa, Ethiopia</p>
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>Addis Ababa, Ethiopia</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>GitHub</h4>
+                            <p>github.com/yetemgetaB</p>
+                        </div>
+                    </div>
+                    <div class="social-links-inline">
+                        <a href="https://github.com/yetemgetaB" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://instagram.com/yourusername" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://t.me/yourusername" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
+
 </main>
 
 <script src="script.js"></script>
