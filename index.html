@@ -16,7 +16,7 @@
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#portfolio" class="nav-link">Projects</a></li>
         <li><a href="#resume" class="nav-link">Resume</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
@@ -32,10 +32,40 @@
     <!-- Home/Hero Section -->
     <section id="home" class="section home-section">
         <div class="section-content">
-            <h1>Hello, I'm <span class="highlight">Yetemgeta Bekele</span></h1>
-            <p class="tagline">Web Developer | Designer | Creative</p>
-            <p class="intro">Welcome to my portfolio. I build things for the web.</p>
-            <a href="#portfolio" class="cta-button">View My Work</a>
+            <div class="hero-container">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hey there, I'm</p>
+                    <h1 class="hero-name"><span class="highlight">Yetemgeta Bekele</span></h1>
+                    <div class="hero-typewriter">
+                        <span class="typing-text">Web Developer</span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">I craft digital experiences that blend creativity with functionality. Based in Addis Ababa, passionate about building beautiful web applications.</p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="cta-button primary">View Projects</a>
+                        <a href="#contact" class="cta-button secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Learning</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <div class="decoration-circle circle-1"></div>
+                <div class="decoration-circle circle-2"></div>
+                <div class="decoration-circle circle-3"></div>
+            </div>
         </div>
     </section>
 
@@ -94,17 +124,46 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="section portfolio-section">
         <div class="section-content">
-            <h2>Portfolio</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>Project Name</h3>
-                    <p>Brief description of the project.</p>
-                    <div class="project-links">
-                        <a href="#">Live Demo</a>
-                        <a href="#">GitHub</a>
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p class="section-subtitle">A selection of my recent work</p>
+            </div>
+            <div class="featured-project">
+                <div class="featured-content">
+                    <div class="featured-text">
+                        <span class="featured-badge">Featured</span>
+                        <h3>Movie Tracker</h3>
+                        <p>A movie tracking application built with modern web technologies. Keep track of your watched movies, discover new ones, and manage your watchlist.</p>
+                        <a href="https://github.com/yetemgetaB/Movie-Tracker" target="_blank" class="project-link">
+                            View on GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                </article>
-                <!-- Add more project-card articles as needed -->
+                    <div class="featured-image">
+                        <img src="https://githubcard.com/yetemgetaB/Movie-Tracker.svg?d=cPMUJF_p" alt="Movie Tracker" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <a href="https://github.com/yetemgetaB/portfolio" target="_blank" class="repo-card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h4>Portfolio Website</h4>
+                        <p>This personal portfolio website built with HTML, CSS, and minimal JavaScript.</p>
+                        <span class="card-arrow"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a href="https://github.com/yetemgetaB/Benny._.stationery" target="_blank" class="repo-card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4>Benny Stationery</h4>
+                        <p>A stationery store management system for inventory and sales tracking.</p>
+                        <span class="card-arrow"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
