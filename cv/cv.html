@@ -442,9 +442,9 @@
                 <i class="fas fa-arrow-left"></i> Back to Portfolio
             </a>
             <h3><i class="fas fa-file-alt"></i> My Resume</h3>
-            <button class="download-btn" onclick="downloadPDF()">
+            <a href="Yetemgeta%20Bekele%20-%20CV_Resume.pdf" class="download-btn" download>
                 <i class="fas fa-download"></i> Download PDF
-            </button>
+            </a>
         </div>
 
         <!-- Header -->
@@ -700,27 +700,9 @@
     </div>
 
     <script>
-        function downloadPDF() {
-            // Show loading state
-            const btn = document.querySelector('.download-btn');
-            const originalHTML = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing...';
-            btn.disabled = true;
-
-            // Small delay to show the loading state
-            setTimeout(() => {
-                // Trigger print dialog
-                window.print();
-                
-                // Reset button
-                btn.innerHTML = originalHTML;
-                btn.disabled = false;
-            }, 500);
-        }
-
-        // Auto-show print dialog if URL has ?download parameter
-        if (window.location.search.includes('download')) {
-            setTimeout(downloadPDF, 1000);
+        // Auto-show print dialog if URL has ?print parameter
+        if (window.location.search.includes('print')) {
+            setTimeout(() => window.print(), 1000);
         }
     </script>
 </body>
