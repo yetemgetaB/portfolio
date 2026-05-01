@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yetemgeta Bekele - CV/Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1842c1;
+            --primary-light: #2a5dd1;
+            --secondary: #2563eb;
+            --accent: #2a5dd1;
+            --dark: #0a0a0f;
+            --light: #f8fafc;
+            --text: #a0a0b0;
+            --text-light: #6a6a7a;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #050508 0%, #0a0a0f 50%, #0f1729 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .download-bar {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .download-bar h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .download-btn {
+            background: white;
+            color: var(--primary);
+            border: none;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+        }
+
+        /* Header Section */
+        .cv-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .header-content .title {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .contact-item i {
+            color: white;
+            font-size: 1rem;
+        }
+
+        /* Main Content */
+        .cv-body {
+            padding: 40px 50px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(90deg, var(--primary), var(--primary-light)) 1;
+        }
+
+        .section-title i {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        /* Summary */
+        .summary-text {
+            font-size: 1.05rem;
+            color: var(--text);
+            line-height: 1.8;
+        }
+
+        /* Experience & Education */
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            padding-bottom: 25px;
+            border-left: 2px solid #e2e8f0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+
+        .timeline-item:last-child {
+            border-left-color: transparent;
+            padding-bottom: 0;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .timeline-date {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .timeline-company {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-desc {
+            color: var(--text);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .skill-category h4 {
+            font-size: 1rem;
+            color: var(--dark);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            color: var(--text);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #cbd5e1;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        /* Projects */
+        .project-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .project-item {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .project-link {
+            color: var(--primary);
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .project-link:hover {
+            color: var(--secondary);
+        }
+
+        .project-desc {
+            color: var(--text);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tech-tag {
+            background: white;
+            color: var(--primary);
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid #cbd5e1;
+        }
+
+        /* Languages & Interests */
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .badge {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge i {
+            font-size: 0.9rem;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .download-bar {
+                display: none !important;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+
+            .timeline-item {
+                break-inside: avoid;
+            }
+
+            .project-item {
+                break-inside: avoid;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cv-header {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .profile-image {
+                margin: 0 auto;
+            }
+
+            .contact-grid {
+                justify-content: center;
+            }
+
+            .cv-body {
+                padding: 25px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Download Bar -->
+        <div class="download-bar no-print">
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <h3><i class="fas fa-file-alt"></i> My Resume</h3>
+            <button class="download-btn" onclick="downloadPDF()">
+                <i class="fas fa-download"></i> Download PDF
+            </button>
+        </div>
+
+        <!-- Header -->
+        <header class="cv-header">
+            <img src="../assets/images/IMG_9725.JPG" alt="Yetemgeta Bekele" class="profile-image">
+            <div class="header-content">
+                <h1>Yetemgeta Bekele</h1>
+                <p class="title">Computer Science Student & Web Developer</p>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>yetemgetabekele@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+251974845643</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Addis Ababa, Ethiopia</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/yetemgetaB</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>@_.yetem._</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <span>@Trinity12123</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>yetemgetab.github.io/portfolio</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="cv-body">
+            <!-- Summary -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Professional Summary
+                </h2>
+                <p class="summary-text">
+                    Passionate Computer Science student at Unity University with a strong foundation in web development. 
+                    Experienced in building responsive, user-friendly web applications using modern technologies. 
+                    Eager to learn and contribute to innovative projects. Demonstrated ability to solve complex problems 
+                    through creative solutions and clean code. Seeking opportunities to grow as a developer while 
+                    making meaningful contributions to the tech community.
+                </p>
+            </section>
+
+            <!-- Education -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </h2>
+                
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">BSc in Computer Science</h3>
+                        <span class="timeline-date">2025 - Present</span>
+                    </div>
+                    <div class="timeline-company">Unity University, Addis Ababa, Ethiopia</div>
+                    <p class="timeline-desc">
+                        Currently pursuing undergraduate degree with focus on software engineering, 
+                        web development, and database management systems. Maintaining strong academic performance 
+                        while building practical projects.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <h3 class="timeline-title">High School Diploma</h3>
+                        <span class="timeline-date">2020 - 2024</span>
+                    </div>
+                    <div class="timeline-company">Trillium International School</div>
+                    <p class="timeline-desc">
+                        Completed secondary education with strong foundation in mathematics and sciences. 
+                        Developed early interest in programming and technology.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-code"></i>
+                    Technical Skills
+                </h2>
+                
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-laptop-code"></i> Frontend Development</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4><i class="fas fa-server"></i> Backend Development</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">REST APIs</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4><i class="fas fa-tools"></i> Tools & Technologies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git & GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Command Line</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4><i class="fas fa-brain"></i> Soft Skills</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Time Management</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram"></i>
+                    Featured Projects
+                </h2>
+                
+                <div class="project-list">
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3 class="project-name">Movie Tracker Application</h3>
+                            <a href="https://github.com/yetemgetaB/Movie-Tracker" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                        <p class="project-desc">
+                            A full-featured movie tracking application that allows users to search for movies, 
+                            track watched films, and manage their watchlist. Implements external API integration 
+                            for real-time movie data.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API Integration</span>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3 class="project-name">Personal Portfolio Website</h3>
+                            <a href="https://github.com/yetemgetaB/portfolio" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                        <p class="project-desc">
+                            A modern, responsive portfolio website showcasing my skills and projects. 
+                            Features particle animations, dark/light theme toggle, contact form integration, 
+                            and smooth scroll animations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Canvas API</span>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3 class="project-name">Benny Stationery Management System</h3>
+                            <a href="https://github.com/yetemgetaB/Benny._.stationery" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                        <p class="project-desc">
+                            An inventory management system for a stationery store. Tracks products, 
+                            sales, and generates reports for business insights.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Web Technologies</span>
+                            <span class="tech-tag">Database</span>
+                            <span class="tech-tag">Management</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Languages -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-language"></i>
+                    Languages
+                </h2>
+                <div class="badges-container">
+                    <span class="badge">
+                        <i class="fas fa-star"></i> Amharic (Native)
+                    </span>
+                    <span class="badge">
+                        <i class="fas fa-star"></i> English (Fluent)
+                    </span>
+                </div>
+            </section>
+
+            <!-- Interests -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-heart"></i>
+                    Interests
+                </h2>
+                <div class="badges-container">
+                    <span class="badge">
+                        <i class="fas fa-code"></i> Coding
+                    </span>
+                    <span class="badge">
+                        <i class="fas fa-book"></i> Reading Tech Blogs
+                    </span>
+                    <span class="badge">
+                        <i class="fas fa-music"></i> Music
+                    </span>
+                    <span class="badge">
+                        <i class="fas fa-gamepad"></i> Gaming
+                    </span>
+                    <span class="badge">
+                        <i class="fas fa-lightbulb"></i> Problem Solving
+                    </span>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function downloadPDF() {
+            // Show loading state
+            const btn = document.querySelector('.download-btn');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing...';
+            btn.disabled = true;
+
+            // Small delay to show the loading state
+            setTimeout(() => {
+                // Trigger print dialog
+                window.print();
+                
+                // Reset button
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
+            }, 500);
+        }
+
+        // Auto-show print dialog if URL has ?download parameter
+        if (window.location.search.includes('download')) {
+            setTimeout(downloadPDF, 1000);
+        }
+    </script>
+</body>
+</html>

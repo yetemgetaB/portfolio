@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Yetemgeta Bekele - Computer Science student and Web Developer from Addis Ababa, Ethiopia. Showcasing projects in web development.">
+    <meta name="author" content="Yetemgeta Bekele">
+    <meta name="keywords" content="Yetemgeta Bekele, Web Developer, Computer Science, Portfolio, Addis Ababa, Ethiopia, HTML, CSS, JavaScript">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yetemgetab.github.io/portfolio/">
+    <meta property="og:title" content="Yetemgeta Bekele | Portfolio">
+    <meta property="og:description" content="Computer Science student and Web Developer from Addis Ababa, Ethiopia">
+    <meta property="og:image" content="https://yetemgetab.github.io/portfolio/assets/images/IMG_9725.JPG">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yetemgetab.github.io/portfolio/">
+    <meta property="twitter:title" content="Yetemgeta Bekele | Portfolio">
+    <meta property="twitter:description" content="Computer Science student and Web Developer from Addis Ababa, Ethiopia">
+    <meta property="twitter:image" content="https://yetemgetab.github.io/portfolio/assets/images/IMG_9725.JPG">
+    
     <title>Yetemgeta Bekele | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
 
     <nav class="sidebar">
     <div class="sidebar-logo-icon">
@@ -23,12 +54,15 @@
         <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
     <div class="social-links">
-        <a href="https://github.com/yetemgetaB" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/_.yetem._/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://t.me/Trinity12123" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+        <a href="https://github.com/yetemgetaB" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/_.yetem._/" target="_blank" aria-label="Instagram Profile"><i class="fab fa-instagram"></i></a>
+        <a href="https://t.me/Trinity12123" target="_blank" aria-label="Telegram Contact"><i class="fab fa-telegram"></i></a>
     </div>
 </nav>
     <main class="main-content">
+    <!-- Particle Background Canvas -->
+    <canvas id="particles-canvas" class="particles-canvas"></canvas>
+
     <section id="home" class="section home-section">
         <div class="section-content">
             <div class="hero-container">
@@ -36,7 +70,7 @@
                     <p class="hero-greeting">Hey there, I'm</p>
                     <h1 class="hero-name"><span class="highlight">Yetemgeta Bekele</span></h1>
                     <div class="hero-typewriter">
-                        <span class="typing-text">Web Developer</span>
+                        <span class="typing-text" data-words='["Web Developer","CS Student","Problem Solver","Tech Enthusiast"]'></span>
                         <span class="cursor">|</span>
                     </div>
                     <p class="hero-description">Computer Science student at Unity University in Addis Ababa, Ethiopia. Passionate about building cool and conceptual projects.</p>
@@ -46,17 +80,17 @@
                     </div>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">3+</span>
+                    <div class="stat-item" data-count="5">
+                        <span class="stat-number">0</span>
                         <span class="stat-label">Projects</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
+                    <div class="stat-item" data-count="12">
+                        <span class="stat-number">0</span>
                         <span class="stat-label">Technologies</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">∞</span>
-                        <span class="stat-label">Learning</span>
+                    <div class="stat-item" data-count="3">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Years Coding</span>
                     </div>
                 </div>
             </div>
@@ -111,8 +145,9 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user"></i>
+                    <div class="profile-photo-container">
+                        <div class="profile-photo-glow"></div>
+                        <img src="assets/images/IMG_9725.JPG" alt="Yetemgeta Bekele" class="profile-photo">
                     </div>
                 </div>
             </div>
@@ -131,12 +166,35 @@
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Frontend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
-                        <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS3</span>
-                        <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
-                        <span class="skill-tag"><i class="devicon-react-original colored"></i> React</span>
-                        <span class="skill-tag"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-css3-plain colored"></i> CSS3</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="75"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-react-original colored"></i> React</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="70"></div></div>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -144,10 +202,28 @@
                         <i class="fas fa-server"></i>
                     </div>
                     <h3>Backend</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
-                        <span class="skill-tag"><i class="devicon-python-plain colored"></i> Python</span>
-                        <span class="skill-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="65"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-python-plain colored"></i> Python</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="60"></div></div>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -155,13 +231,73 @@
                         <i class="fas fa-tools"></i>
                     </div>
                     <h3>Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git</span>
-                        <span class="skill-tag"><i class="devicon-github-original"></i> GitHub</span>
-                        <span class="skill-tag"><i class="devicon-figma-plain colored"></i> Figma</span>
-                        <span class="skill-tag"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-git-plain colored"></i> Git</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-github-original"></i> GitHub</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-figma-plain colored"></i> Figma</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="50"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar"><div class="progress" data-width="90"></div></div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section id="github" class="section github-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>GitHub Stats</h2>
+                <p class="section-subtitle">My open source journey</p>
+            </div>
+            <div class="github-stats-grid">
+                <div class="github-card">
+                    <div class="github-stat">
+                        <i class="fas fa-book"></i>
+                        <span class="github-number" id="repo-count">--</span>
+                        <span class="github-label">Repositories</span>
+                    </div>
+                </div>
+                <div class="github-card">
+                    <div class="github-stat">
+                        <i class="fas fa-code-branch"></i>
+                        <span class="github-number" id="commit-count">--</span>
+                        <span class="github-label">Commits</span>
+                    </div>
+                </div>
+                <div class="github-card">
+                    <div class="github-stat">
+                        <i class="fas fa-star"></i>
+                        <span class="github-number" id="star-count">--</span>
+                        <span class="github-label">Stars</span>
+                    </div>
+                </div>
+            </div>
+            <div class="github-graph">
+                <img src="https://ghchart.rshah.org/1842c1/yetemgetaB" alt="GitHub Contributions" class="contribution-graph">
             </div>
         </div>
     </section>
@@ -188,23 +324,46 @@
                 </div>
             </div>
             <div class="projects-grid">
-                <a href="https://github.com/yetemgetaB/portfolio" target="_blank" class="repo-card">
+                <a href="https://github.com/yetemgetaB/portfolio" target="_blank" class="repo-card" data-tilt>
                     <div class="card-content">
                         <div class="card-icon">
                             <i class="fas fa-code"></i>
                         </div>
                         <h4>Portfolio Website</h4>
                         <p>This personal portfolio website built with HTML, CSS, and minimal JavaScript.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
                         <span class="card-arrow"><i class="fas fa-external-link-alt"></i></span>
                     </div>
                 </a>
-                <a href="https://github.com/yetemgetaB/Benny._.stationery" target="_blank" class="repo-card">
+                <a href="https://github.com/yetemgetaB/Benny._.stationery" target="_blank" class="repo-card" data-tilt>
                     <div class="card-content">
                         <div class="card-icon">
                             <i class="fas fa-store"></i>
                         </div>
                         <h4>Benny Stationery</h4>
                         <p>A stationery store management system for inventory and sales tracking.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Management</span>
+                            <span class="project-tag">Inventory</span>
+                        </div>
+                        <span class="card-arrow"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a href="https://github.com/yetemgetaB/Movie-Tracker" target="_blank" class="repo-card" data-tilt>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h4>Movie Tracker</h4>
+                        <p>Track your watched movies, discover new ones, and manage your watchlist.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">API</span>
+                            <span class="project-tag">Web App</span>
+                        </div>
                         <span class="card-arrow"><i class="fas fa-external-link-alt"></i></span>
                     </div>
                 </a>
@@ -222,17 +381,17 @@
                 <div class="timeline-item left">
                     <div class="timeline-content">
                         <span class="timeline-date">2025 - Present</span>
-                        <h3>Collage</h3>
+                        <h3>BSc Computer Science</h3>
                         <p class="timeline-company">Unity University</p>
-                        <p>Taking my computer science courses.</p>
+                        <p>Pursuing undergraduate degree with focus on software engineering and web development.</p>
                     </div>
                 </div>
                 <div class="timeline-item right">
                     <div class="timeline-content">
                         <span class="timeline-date">2020 - 2024</span>
-                        <h3>High School</h3>
+                        <h3>High School Diploma</h3>
                         <p class="timeline-company">Trillium International School</p>
-                        <p>Taking my high school classes.</p>
+                        <p>Completed secondary education with strong foundation in mathematics and sciences.</p>
                     </div>
                 </div>
                 <div class="timeline-item left">
@@ -240,12 +399,17 @@
                         <span class="timeline-date">Before - 2023</span>
                         <h3>Middle School</h3>
                         <p class="timeline-company">Trillium International School</p>
-                        <p>FInishing my middle school courses.</p>
+                        <p>Completed middle school education, developing early interest in technology.</p>
                     </div>
                 </div>
             </div>
             <div class="resume-actions">
-                <a href="#" class="download-btn" download><i class="fas fa-download"></i> Download CV</a>
+                <a href="cv/cv.html?download" class="download-btn" target="_blank">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+                <a href="cv/cv.html" class="download-btn secondary-btn" target="_blank">
+                    <i class="fas fa-eye"></i> View CV
+                </a>
             </div>
         </div>
     </section>
@@ -269,6 +433,15 @@
                     </div>
                     <div class="info-card">
                         <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p>+251974845643</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <div class="info-content">
@@ -286,19 +459,19 @@
                         </div>
                     </div>
                     <div class="social-links-inline">
-                        <a href="https://github.com/yetemgetaB" target="_blank" class="social-icon">
+                        <a href="https://github.com/yetemgetaB" target="_blank" class="social-icon" aria-label="Visit my GitHub profile">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://instagram.com/yourusername" target="_blank" class="social-icon">
+                        <a href="https://www.instagram.com/_.yetem._/" target="_blank" class="social-icon" aria-label="Visit my Instagram profile">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="https://t.me/yourusername" target="_blank" class="social-icon">
+                        <a href="https://t.me/Trinity12123" target="_blank" class="social-icon" aria-label="Contact me on Telegram">
                             <i class="fab fa-telegram"></i>
                         </a>
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
-                    <form class="contact-form">
+                    <form class="contact-form" action="https://formspree.io/f/mlgargew" method="POST">
                         <div class="form-group">
                             <input type="text" name="name" placeholder="Your Name" required>
                         </div>
@@ -306,11 +479,15 @@
                             <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
                             <textarea name="message" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">
                             Send Message <i class="fas fa-paper-plane"></i>
                         </button>
+                        <div class="form-status" id="form-status"></div>
                     </form>
                 </div>
             </div>
@@ -319,6 +496,9 @@
 
 </main>
 
-<script src="script.js"></script>
+<!-- Toast Notification Container -->
+<div class="toast-container" id="toast-container"></div>
+
+<script src="assets/js/script.js"></script>
 </body>
 </html>
